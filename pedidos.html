@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #fef8f8;
+        }
+
+        .pedidos {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .prato {
+            width: 100%;
+        }
+
+        .pedido-only h1 {
+            text-align: center;
+
+        }
+
+        .pedido-only {
+            width: 300px;
+            border-radius: 6px;
+            border: 1px solid black;
+            transition: 1s;
+            margin-bottom: 20px;
+        }
+
+        .info-pedido {
+            padding: 20px;
+        }
+
+        .info-pedido span {
+            background-color: white;
+            color: black;
+            border-radius: 7px;
+        }
+
+        h3,
+        p {
+            margin: 5px 0px;
+        }
+
+        .verificado {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            align-items: center;
+            background-color: lightblue;
+            cursor: pointer;
+
+        }
+
+        .ok {
+            width: 50px;
+        }
+
+        h1 {
+            background-color: rgba(220, 20, 60, 0.764);
+            border-radius: 6px;
+            color: white;
+            padding: 5px;
+        }
+
+        .info-pedido h3 {
+            background-color: lightblue;
+            border-radius: 6px;
+            padding: 2px;
+        }
+
+        .info-pedido img {
+            margin-right: 10px;
+            width: 50px;
+        }
+
+        .info-pedido div {
+            display: flex;
+            margin-top: 10px;
+        }
+    </style>
+    <title>Pedidos</title>
+</head>
+
+<body>
+    <section class="pedidos">
+
+
+        <div class="pedido-only">
+            <div>
+                <img class="prato" src="./img/img1.avif">
+            </div>
+            <div class="info-pedido">
+                <h1>Pedido <span>#123</span> | Strogonoff</h1>
+                <h3>Nome</h3>
+                <p>Lucca Lopes</p>
+                <h3>Telefone</h3>
+                <p>(62)996973771</p>
+                <div>
+                    <img src="./img/comeraqui.png">
+                    <h4>Para comer no local</h4>
+
+                </div>
+            </div>
+            <div class="verificado">
+                <img class="ok" src="./img/ampulheta.png">
+                <h3 style="margin-right: 10px;">Pedido em andamento</h3>
+            </div>
+        </div>
+
+        <div class="pedido-only">
+            <div>
+                <img class="prato" src="./img/escondidinho.jpg">
+            </div>
+            <div class="info-pedido">
+                <h1>Pedido <span>#345</span> | Escondidinho</h1>
+                <h3>Nome</h3>
+                <p>Joaozin Silva</p>
+                <h3>Telefone</h3>
+                <p>(62)996973771</p>
+                <div>
+                    <img src="./img/paralevar.png">
+                    <h4>Para Levar</h4>
+
+                </div>
+            </div>
+            <div class="verificado">
+                <img class="ok" src="./img/ampulheta.png">
+                <h3 style="margin-right: 10px;">Pedido em andamento</h3>
+            </div>
+        </div>
+
+
+    </section>
+
+    <a href="pedidosProntos.html">PEDIDOS PRONTOS</a>
+
+
+    <!--<script src="./js/apiFront.js"></script>-->
+    <script src="./js/jsParaFront.js"></script>
+</body>
+
+</html>

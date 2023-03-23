@@ -1,0 +1,259 @@
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fef8f8;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+
+.card {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+
+}
+
+.card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: calc(var(--curve) * 1px);
+    background-color: var(--surface-color);
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+
+
+
+.card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;
+    background-color: var(--surface-color);
+    transform: translateY(-80%);
+    transition: .2s ease-in-out;
+    border: none;
+}
+
+li {
+    height: 400px;
+    background-color: #fef8f8;
+}
+
+.plus img {
+    cursor: pointer;
+    width: 50px;
+}
+
+.card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.card__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+
+/*
+.card:hover .card__overlay {
+    transform: translateY(0);
+}
+
+.card:hover .card__header {
+    transform: translateY(0);
+}
+*/
+
+.selecionado {
+    border-color: crimson;
+}
+
+.active {
+    transform: translateY(0);
+}
+
+.card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+}
+
+.card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";
+    font-size: .8em;
+    color: #D7BDCA;
+}
+
+.card__status {
+    font-size: .8em;
+    color: #D7BDCA;
+}
+
+.card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #D7BDCA;
+    font-family: "MockFlowFont";
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.quantidade {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantidade img {
+    cursor: pointer;
+    margin: 20px;
+}
+
+.card__description label {
+    background-color: rgb(173, 216, 230, 0.5);
+    border-radius: 6px;
+    color: black;
+    padding: 5px;
+}
+
+.card__description input {
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 10px;
+}
+
+.enviar {
+    display: flex;
+    justify-content: center;
+}
+
+.enviar button {
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.enviar button:hover {
+    scale: 1.1;
+}
+
+.enviar button {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.enviar img {
+    margin: 0px 20px;
+    width: 50px;
+}
+
+.comerAqui {
+    display: flex;
+    height: 50px;
+    margin: 10px 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.comerAqui p {
+    padding: 5px;
+}
+
+.comerAqui img {
+    padding: 0;
+    margin: 0;
+}
+
+.viaCliente {
+    z-index: 2;
+    position: fixed;
+    height: 400px;
+    width: 100%;
+    background-color: lightblue;
+    border-radius: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+    border: 2px solid black;
+}
+
+.viaCliente img {
+    width: 100px;
+    margin-top: 20px;
+}
+
+.viaCliente div {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.viaCliente span {
+    border-bottom: 2px solid black;
+    background-color: white;
+    padding: 5px;
+}
+
+.viaCliente p {
+    margin: 20px;
+
+}
+
+.viaCliente button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
